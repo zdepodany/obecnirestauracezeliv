@@ -1,0 +1,56 @@
+.menuSection {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(/img/menuBg.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.75);
+}
+
+.menuSection p {
+  margin-bottom: 30px;
+}
+
+.menuSubHeading {
+  margin-top: 45px;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.menuPart {
+  width: 65%;
+  margin: 7px 0;
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foodInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.foodName {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.foodDetail {
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.foodPrice {
+  font-size: 15px;
+  font-weight: 300;
+}

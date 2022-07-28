@@ -14,3 +14,11 @@
 .facebookSection p {
   margin-bottom: 30px;
 }
+
+/* Responsivity */
+
+@media only screen and (max-width: 900px) {
+  .facebookSection iframe {
+    width: 90%;
+  }
+}

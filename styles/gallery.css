@@ -13,6 +13,14 @@
   color: #fff;
 }
 
-.gallerySlider {
-  height: 85vh;
+/* Responsivity */
+
+@media only screen and (max-width: 900px) {
+  .gallerySection {
+    padding: 40px 0;
+  }
+
+  .gallerySlider {
+    width: 90%;
+  }
 }

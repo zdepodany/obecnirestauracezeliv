@@ -1,0 +1,134 @@
+footer {
+  width: 100%;
+  padding: 40px 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #171717;
+  color: #fff;
+}
+
+footer p {
+  margin-top: 15px;
+  width: 50%;
+}
+
+/* Opening hours */
+
+.openingHours {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ohHeading {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.week {
+  width: 20%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ohDays {
+  display: flex;
+  flex-direction: column;
+}
+
+.ohDays span {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.ohHours {
+  display: flex;
+  flex-direction: column;
+}
+
+.ohHours span {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Contact */
+
+.contact {
+  width: 60%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.contactHeading {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.contactLine {
+  margin: 7px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contactIcon {
+  color: #cd0030;
+}
+
+.contactSvgIcon {
+  width: 24px;
+}
+
+.contactText {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* Responsivity */
+
+@media only screen and (max-width: 900px) {
+  footer p {
+    width: 75%;
+  }
+
+  .week {
+    width: 70%;
+  }
+
+  .ohDays span {
+    font-size: 14px;
+  }
+
+  .ohHours span {
+    font-size: 14px;
+  }
+
+  .contact {
+    width: 75%;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .contactBlock {
+    margin-bottom: 20px;
+  }
+
+  .contactHeading {
+    font-size: 24px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+}

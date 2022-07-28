@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/menu.css" />
     <link rel="stylesheet" href="styles/facebook.css" />
     <link rel="stylesheet" href="styles/gallery.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
     <!-- Bootstrap styles -->
     <link
@@ -32,12 +33,7 @@
   </head>
   <body>
     <section class="welcomeSection">
-      <section class="welcomeSlideshow">
-        <img class="welcomeSlide" src="img/bg1.jpg" alt="Burger and fries" />
-        <img class="welcomeSlide" src="img/bg2.jpg" alt="Food on table" />
-        <img class="welcomeSlide" src="img/bg3.jpg" alt="Food at restaurant" />
-      </section>
-      <section class="navbar">
+      <section class="myNavbar">
         <div class="navbarInfo">
           <div class="navbarInfoLine">
             <span class="material-symbols-outlined"> call </span>
@@ -45,14 +41,15 @@
           </div>
           <div class="navbarInfoLine">
             <span class="material-symbols-outlined"> schedule </span>
-            <span class="navbarInfoText">Dnes od tolika do tolika</span>
+            <span id="openingHoursForToday" class="navbarInfoText"></span>
           </div>
         </div>
         <div class="navbarBtns">
           <a class="navbarBtn" href="#">ÚVOD</a>
-          <a class="navbarBtn" href="#">JÍDELNÍ LÍSTEK</a>
-          <a class="navbarBtn" href="#">GALERIE</a>
-          <a class="navbarBtn" href="#">KONTAKT</a>
+          <a class="navbarBtn" href="#menuSection">JÍDELNÍ LÍSTEK</a>
+          <a class="navbarBtn" href="#gallerySection">GALERIE</a>
+          <a class="navbarBtn" href="#footer">KONTAKT</a>
+          <button><span class="material-symbols-outlined"> menu </span></button>
         </div>
       </section>
       <section class="welcomeContent">
@@ -244,12 +241,12 @@
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
     </section>
-    <section class="gallerySection">
+    <section id="gallerySection" class="gallerySection">
       <h3>Galerie</h3>
       <p>Ať víte jak to u nás krásně vypadá</p>
       <div
         id="carouselExampleIndicators"
-        class="carousel slide"
+        class="carousel slide gallerySlider"
         data-ride="carousel"
       >
         <ol class="carousel-indicators">
@@ -261,7 +258,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner gallerySlider">
+        <div class="carousel-inner">
           <div class="bsSlide carousel-item active">
             <img
               class="d-block w-100"
@@ -304,6 +301,73 @@
         </a>
       </div>
     </section>
+    <footer id="footer">
+      <h3>Kontakt</h3>
+      <p>
+        Chcete si zarezervovat stůl? nebo zajistit prostor pro svou událost
+        (firemní večírek, svatba apod.) v restauraci nebo kulturním domě? Zde
+        najdete kontakt na nás a všechno spolu domluvíme!
+      </p>
+      <section class="openingHours">
+        <span class="ohHeading">Otevírací doba</span>
+        <div class="week">
+          <div class="ohDays">
+            <span>Pondělí</span>
+            <span>Úterý</span>
+            <span>Středa</span>
+            <span>Čtvrtek</span>
+            <span>Pátek</span>
+            <span>Sobota</span>
+            <span>Neděle</span>
+          </div>
+          <div class="ohHours">
+            <span>11:00 - 20:00</span>
+            <span>11:00 - 20:00</span>
+            <span>11:00 - 20:00</span>
+            <span>11:00 - 20:00</span>
+            <span>11:00 - 22:00</span>
+            <span>11:00 - 22:00</span>
+            <span>11:00 - 20:00</span>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contactBlock">
+          <span class="contactHeading">Kontaktní informace</span>
+          <div class="contactLine">
+            <span class="contactIcon material-symbols-outlined"> person </span>
+            <span class="contactText">Zdeněk Kubásek</span>
+          </div>
+          <div class="contactLine">
+            <span class="contactIcon material-symbols-outlined">
+              pin_drop
+            </span>
+            <span class="contactText">Želiv 316, 394 44 Želiv</span>
+          </div>
+          <div class="contactLine">
+            <span class="contactIcon material-symbols-outlined">
+              alternate_email
+            </span>
+            <span class="contactText">info@obecnirestauracezeliv.cz</span>
+          </div>
+          <div class="contactLine">
+            <img class="contactSvgIcon" src="svg/fblogo.svg" alt="FB" />
+            <span class="contactText">Obecní restaurace Želiv</span>
+          </div>
+        </div>
+        <div class="contactBlock">
+          <span class="contactHeading">Fakturační údaje</span>
+          <div class="contactLine">
+            <span>IČO:</span>
+            <span class="contactText">75513871</span>
+          </div>
+          <div class="contactLine">
+            <span>Bankovní účet:</span>
+            <span class="contactText">12345678/1234</span>
+          </div>
+        </div>
+      </section>
+    </footer>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
@@ -334,5 +398,6 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script type="text/javascript" src="js/slickSliders.js"></script>
+    <script type="text/javascript" src="js/openingHours.js"></script>
   </body>
 </html>

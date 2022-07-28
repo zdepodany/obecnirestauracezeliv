@@ -54,3 +54,25 @@
   font-size: 15px;
   font-weight: 300;
 }
+
+/* Responsivity */
+
+@media only screen and (max-width: 900px) {
+  .menuSubHeading {
+    margin-top: 25px;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .menuPart {
+    width: 80%;
+  }
+
+  .foodItem {
+    flex-direction: column;
+  }
+
+  .foodInfo {
+    text-align: center;
+  }
+}

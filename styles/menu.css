@@ -17,6 +17,7 @@
 }
 
 .menuSubHeading {
+  text-transform: uppercase;
   margin-top: 45px;
   font-size: 34px;
   font-weight: 500;

@@ -15,6 +15,22 @@ footer p {
   width: 50%;
 }
 
+.footerCredit {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.footerCredit a {
+  color: #cd0030;
+  text-decoration: none;
+}
+
+.footerCredit a:hover {
+  text-decoration: underline;
+}
+
 /* Opening hours */
 
 .openingHours {

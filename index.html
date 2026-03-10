@@ -45,27 +45,41 @@
     />
   </head>
   <body>
+    <nav class="myNavbar">
+      <div class="navbarInner">
+        <div class="navbarLeft">
+          <div class="navbarInfoItem navbarInfoItem--status">
+            <span class="material-symbols-outlined">schedule</span>
+            <span id="openingHoursForToday" class="statusIndicator"></span>
+          </div>
+        </div>
+        <div class="navbarLinks">
+          <a class="navbarLink" href="#">Úvod</a>
+          <a class="navbarLink" href="#menuSection">Jídelní lístek</a>
+          <a class="navbarLink" href="#gallerySection">Galerie</a>
+          <a class="navbarLink navbarLink--cta" href="#footer">Rezervace</a>
+        </div>
+        <button class="navbarToggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span class="navbarToggleBar"></span>
+          <span class="navbarToggleBar"></span>
+          <span class="navbarToggleBar"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="navbarOverlay" id="navbarOverlay">
+      <button class="navbarOverlayClose" type="button" aria-label="Zavřít menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="navbarOverlayContent">
+        <a class="navbarOverlayLink" href="#">Úvod</a>
+        <a class="navbarOverlayLink" href="#menuSection">Jídelní lístek</a>
+        <a class="navbarOverlayLink" href="#gallerySection">Galerie</a>
+        <a class="navbarOverlayLink navbarOverlayLink--cta" href="#footer">Rezervace</a>
+      </div>
+    </div>
     <section class="welcomeSection">
-      <section class="myNavbar">
-        <div class="navbarInfo">
-          <div class="navbarInfoLine">
-            <span class="material-symbols-outlined"> call </span>
-            <a class="navbarInfoText" href="tel:+420739158665">+420 739 158 665</a>
-          </div>
-          <div class="navbarInfoLine">
-            <span class="material-symbols-outlined"> schedule </span>
-            <span id="openingHoursForToday" class="navbarInfoText"></span>
-          </div>
-        </div>
-        <div class="navbarBtns">
-          <a class="navbarBtn" href="#">ÚVOD</a>
-          <a class="navbarBtn" href="#menuSection">JÍDELNÍ LÍSTEK</a>
-          <a class="navbarBtn" href="#gallerySection">GALERIE</a>
-          <a class="navbarBtn" href="#footer">KONTAKT</a>
-        </div>
-      </section>
       <section class="welcomeContent">
-        <h2>Obecní restaurace a penzion</h2>
+        <h2>Obecní restaurace</h2>
         <h1>ŽELIV</h1>
         <div class="line"></div>
         <div class="quoteSlider">
@@ -92,6 +106,10 @@
             <span class="quoteAuthor">- Hippokratés</span>
           </div>
         </div>
+        <a class="heroReviews" href="https://maps.app.goo.gl/cVqabv9vFwZPgwhL7" target="_blank" rel="noopener noreferrer">
+          <span class="heroReviewsStars" aria-label="4 z 5 hvězd">★★★★☆</span>
+          <span class="heroReviewsText">4,0 · 335 recenzí na Google</span>
+        </a>
         <a class="welcomeBtn" href="#menuSection">JÍDELNÍ LÍSTEK</a>
       </section>
     </section>
@@ -578,8 +596,6 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
         </ol>
         <div class="carousel-inner">
           <div class="bsSlide carousel-item active">
@@ -617,20 +633,6 @@
               alt="Fifth slide"
             />
           </div>
-          <div class="bsSlide carousel-item">
-            <img
-              class="d-block w-100"
-              src="img/gallery/pen01.webp"
-              alt="_Sixth slide"
-            />
-          </div>
-          <div class="bsSlide carousel-item">
-            <img
-              class="d-block w-100"
-              src="img/gallery/pen02.webp"
-              alt="Seventh slide"
-            />
-          </div>
         </div>
         <a
           class="carousel-control-prev"
@@ -662,68 +664,96 @@
         Zároveň nabízíme ubytování v sousedícím penzionu!
       </p>
       <section class="openingHours">
-        <span class="ohHeading">Otevírací doba</span>
-        <div class="week">
-          <div class="ohDays">
-            <span>Pondělí</span>
-            <span>Úterý</span>
-            <span>Středa</span>
-            <span>Čtvrtek</span>
-            <span>Pátek</span>
-            <span>Sobota</span>
-            <span>Neděle</span>
+        <h4 class="ohHeading">Otevírací doba</h4>
+        <div class="ohTable">
+          <div class="ohRow" data-day="1">
+            <span class="ohDay">Pondělí</span>
+            <span class="ohTime">11:00 – 20:00</span>
           </div>
-          <div class="ohHours">
-            <span>11:00 - 20:00</span>
-            <span>11:00 - 20:00</span>
-            <span>11:00 - 20:00</span>
-            <span>11:00 - 20:00</span>
-            <span>11:00 - 22:00</span>
-            <span>11:00 - 22:00</span>
-            <span>11:00 - 20:00</span>
+          <div class="ohRow" data-day="2">
+            <span class="ohDay">Úterý</span>
+            <span class="ohTime">11:00 – 20:00</span>
+          </div>
+          <div class="ohRow" data-day="3">
+            <span class="ohDay">Středa</span>
+            <span class="ohTime">11:00 – 20:00</span>
+          </div>
+          <div class="ohRow" data-day="4">
+            <span class="ohDay">Čtvrtek</span>
+            <span class="ohTime">11:00 – 20:00</span>
+          </div>
+          <div class="ohRow" data-day="5">
+            <span class="ohDay">Pátek</span>
+            <span class="ohTime">11:00 – 22:00</span>
+          </div>
+          <div class="ohRow" data-day="6">
+            <span class="ohDay">Sobota</span>
+            <span class="ohTime">11:00 – 22:00</span>
+          </div>
+          <div class="ohRow" data-day="0">
+            <span class="ohDay">Neděle</span>
+            <span class="ohTime">11:00 – 20:00</span>
           </div>
         </div>
       </section>
       <section class="contact">
-        <div class="contactBlock">
-          <span class="contactHeading">Kontaktní informace</span>
-          <div class="contactLine">
-            <span class="contactIcon material-symbols-outlined"> person </span>
-            <span class="contactText">Zdeněk Kubásek</span>
+        <div class="contactGrid">
+          <div class="contactCard">
+            <h4 class="contactHeading">
+              <span class="material-symbols-outlined">contact_page</span>
+              Kontaktní informace
+            </h4>
+            <div class="contactList">
+              <div class="contactItem">
+                <span class="contactIcon material-symbols-outlined">person</span>
+                <span class="contactText">Zdeněk Kubásek</span>
+              </div>
+              <div class="contactItem">
+                <span class="contactIcon material-symbols-outlined">pin_drop</span>
+                <a class="contactText contactLink" href="https://maps.app.goo.gl/cVqabv9vFwZPgwhL7" target="_blank" rel="noopener noreferrer">Želiv 316, 394 44 Želiv</a>
+              </div>
+              <div class="contactItem">
+                <span class="contactIcon material-symbols-outlined">alternate_email</span>
+                <a class="contactText contactLink" href="mailto:info@obecnirestauracezeliv.cz">info@obecnirestauracezeliv.cz</a>
+              </div>
+              <div class="contactItem">
+                <span class="contactIcon material-symbols-outlined">call</span>
+                <a class="contactText contactLink" href="tel:+420739158665">+420 739 158 665</a>
+              </div>
+              <div class="contactItem">
+                <img class="contactSvgIcon" src="svg/fblogo.svg" alt="" aria-hidden="true" />
+                <a class="contactText contactLink" href="https://www.facebook.com/profile.php?id=100083138806394" target="_blank" rel="noopener noreferrer">Facebook</a>
+              </div>
+            </div>
           </div>
-          <div class="contactLine">
-            <span class="contactIcon material-symbols-outlined">
-              pin_drop
-            </span>
-            <span class="contactText">Želiv 316, 394 44 Želiv</span>
-          </div>
-          <div class="contactLine">
-            <span class="contactIcon material-symbols-outlined">
-              alternate_email
-            </span>
-            <span class="contactText">info@obecnirestauracezeliv.cz</span>
-          </div>
-          <div class="contactLine">
-            <span class="contactIcon material-symbols-outlined">
-              call
-            </span>
-            <span class="contactText">+420 739 158 665</span>
-          </div>
-          <div class="contactLine">
-            <img class="contactSvgIcon" src="svg/fblogo.svg" alt="FB" />
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=100083138806394"><span class="contactText">Obecní restaurace Želiv</span></a>
+          <div class="contactCard">
+            <h4 class="contactHeading">
+              <span class="material-symbols-outlined">receipt_long</span>
+              Fakturační údaje
+            </h4>
+            <div class="contactList">
+              <div class="contactItem">
+                <span class="contactLabel">IČO</span>
+                <span class="contactText">75513871</span>
+              </div>
+              <div class="contactItem">
+                <span class="contactLabel">Účet</span>
+                <span class="contactText">2501118321/2010</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="contactBlock">
-          <span class="contactHeading">Fakturační údaje</span>
-          <div class="contactLine">
-            <span>IČO:</span>
-            <span class="contactText">75513871</span>
-          </div>
-          <div class="contactLine">
-            <span>Bankovní účet:</span>
-            <span class="contactText">2501118321/2010</span>
-          </div>
+        <div class="contactMap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.716587603759!2d15.223808676331567!3d49.529807353223305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470cfa9909954173%3A0xa50c766bc6c80eda!2sObecn%C3%AD%20restaurace%20%C5%BDeliv!5e1!3m2!1scs!2scz!4v1773133845724!5m2!1scs!2scz"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa – Obecní restaurace Želiv"
+          ></iframe>
         </div>
       </section>
       <p class="footerCredit">
@@ -759,6 +789,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/slickSliders.js"></script>
     <script type="text/javascript" src="js/openingHours.js"></script>
   </body>

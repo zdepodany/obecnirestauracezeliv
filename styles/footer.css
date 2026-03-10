@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  padding: 40px 0;
+  padding: 48px 24px 40px;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +13,11 @@ footer {
 footer p {
   margin-top: 15px;
   width: 50%;
+  max-width: 600px;
 }
 
 .footerCredit {
-  margin-top: 40px;
+  margin-top: 48px;
   font-size: 14px;
   font-weight: 200;
   opacity: 0.8;
@@ -35,116 +36,242 @@ footer p {
 
 .openingHours {
   width: 100%;
-  margin-top: 30px;
+  max-width: 420px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 
 .ohHeading {
-  font-size: 34px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
-.week {
-  width: 20%;
-  margin-top: 15px;
+.ohTable {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ohRow {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease;
 }
 
-.ohDays {
-  display: flex;
-  flex-direction: column;
+.ohRow:last-child {
+  border-bottom: none;
 }
 
-.ohDays span {
-  text-align: left;
-  font-size: 18px;
-  font-weight: 200;
+.ohRow.today {
+  background: rgba(205, 0, 48, 0.2);
+  border-left: 3px solid #cd0030;
 }
 
-.ohHours {
-  display: flex;
-  flex-direction: column;
+.ohDay {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-.ohHours span {
-  text-align: right;
-  font-size: 18px;
+.ohRow.today .ohDay {
+  font-weight: 600;
+  color: #fff;
+}
+
+.ohRow.today .ohDay::after {
+  content: ' · Dnes';
+  font-size: 13px;
   font-weight: 500;
+  color: #cd0030;
+  margin-left: 6px;
+}
+
+.ohTime {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-variant-numeric: tabular-nums;
+}
+
+.ohRow.today .ohTime {
+  color: #fff;
+  font-weight: 600;
 }
 
 /* Contact */
 
 .contact {
-  width: 60%;
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 56px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 28px;
   text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.2s ease;
+}
+
+.contactCard:hover {
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .contactHeading {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.contactLine {
-  margin: 7px 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contactHeading .material-symbols-outlined {
+  font-size: 22px;
+  color: #cd0030;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
 }
 
 .contactIcon {
   color: #cd0030;
+  font-size: 20px;
+  flex-shrink: 0;
 }
 
 .contactSvgIcon {
-  width: 24px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .contactText {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 200;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contactLink {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: #cd0030 !important;
+}
+
+.contactLabel {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  min-width: 48px;
+}
+
+.contactMap {
+  margin-top: 32px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactMap iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  max-height: 450px;
 }
 
 /* Responsivity */
 
 @media only screen and (max-width: 900px) {
+  footer {
+    padding: 40px 20px 32px;
+  }
+
   footer p {
-    width: 75%;
+    width: 90%;
   }
 
-  .week {
-    width: 70%;
+  .openingHours {
+    max-width: 100%;
+    margin-top: 32px;
   }
 
-  .ohDays span {
+  .ohHeading {
+    font-size: 20px;
+  }
+
+  .ohRow {
+    padding: 12px 16px;
+  }
+
+  .ohDay {
+    font-size: 15px;
+  }
+
+  .ohTime {
     font-size: 14px;
   }
 
-  .ohHours span {
-    font-size: 14px;
+  .ohRow.today .ohDay::after {
+    font-size: 12px;
   }
 
   .contact {
-    width: 75%;
     margin-top: 40px;
-    flex-direction: column;
   }
 
-  .contactBlock {
-    margin-bottom: 20px;
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contactCard {
+    padding: 24px;
   }
 
   .contactHeading {
-    font-size: 24px;
+    font-size: 16px;
   }
 
-  .contactText {
+  .contactItem {
     font-size: 14px;
+  }
+
+  .contactMap {
+    margin-top: 24px;
+  }
+
+  .contactMap iframe {
+    height: 280px;
   }
 }

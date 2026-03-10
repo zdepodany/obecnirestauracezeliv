@@ -1,22 +1,103 @@
 <!DOCTYPE html>
 <html lang="cs">
   <head>
-    <title>Obecní restaurace a penzion Želiv</title>
+    <title>Obecní restaurace Želiv | Jídelní lístek, rezervace, kontakt</title>
     <link rel="icon" type="image/svg" href="svg/lunch_dining_FILL0.svg">
+    <link rel="canonical" href="https://obecnirestauracezeliv.cz">
 
     <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vítejte na stránkách obecní restaurace a penzionu Želiv, zde najdete naše menu a kontakt pro smluvení ubytování nebo rezervace stolu či kulturního domu pro vaši akci!">
-    <meta property="og:locale" content="cz_CS">
+    <meta name="description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po–Čt 11–20, Pá–So 11–22. Kontakt: +420 739 158 665.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Obecní restaurace Želiv">
+    <meta name="geo.region" content="CZ-311">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="cs_CZ">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Obecní restaurace a penzion Želiv">
-    <meta property="og:description" content="Vítejte na stránkách obecní restaurace a penzionu Želiv, zde najdete naše menu a kontakt pro smluvení ubytování nebo rezervace stolu či kulturního domu pro vaši akci!">
+    <meta property="og:title" content="Obecní restaurace Želiv | Jídelní lístek a rezervace">
+    <meta property="og:description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po–Čt 11–20, Pá–So 11–22.">
     <meta property="og:url" content="https://obecnirestauracezeliv.cz">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Obecní restaurace a penzion Želiv">
-    <meta property="twitter:description" content="Vítejte na stránkách obecní restaurace a penzionu Želiv, zde najdete naše menu a kontakt pro smluvení ubytování nebo rezervace stolu či kulturního domu pro vaši akci!">
-    <meta property="twitter:url" content="https://obecnirestauracezeliv.cz">
+    <meta property="og:site_name" content="Obecní restaurace Želiv">
+    <meta property="og:image" content="https://obecnirestauracezeliv.cz/img/bg1.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Obecní restaurace Želiv – interiér restaurace">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obecní restaurace Želiv | Jídelní lístek a rezervace">
+    <meta name="twitter:description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu.">
+    <meta name="twitter:image" content="https://obecnirestauracezeliv.cz/img/bg1.webp">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://obecnirestauracezeliv.cz/#restaurant",
+      "name": "Obecní restaurace Želiv",
+      "description": "Obecní restaurace v Želivi s jídelním lístkem, možností rezervace stolu a pronájmu kulturního domu pro akce.",
+      "url": "https://obecnirestauracezeliv.cz",
+      "telephone": "+420739158665",
+      "email": "info@obecnirestauracezeliv.cz",
+      "priceRange": "7 Kč - 465 Kč",
+      "acceptsReservations": true,
+      "servesCuisine": "Czech",
+      "currenciesAccepted": "CZK",
+      "paymentAccepted": "Hotovost, Platební karta",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Želiv 316",
+        "addressLocality": "Želiv",
+        "postalCode": "394 44",
+        "addressRegion": "Vysočina",
+        "addressCountry": "CZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.529807,
+        "longitude": 15.223808
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "22:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "20:00"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.0",
+        "reviewCount": "335",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "image": [
+        "https://obecnirestauracezeliv.cz/img/bg1.webp",
+        "https://obecnirestauracezeliv.cz/img/gallery/res01.webp",
+        "https://obecnirestauracezeliv.cz/img/gallery/res02.webp",
+        "https://obecnirestauracezeliv.cz/img/gallery/res03.webp",
+        "https://obecnirestauracezeliv.cz/img/gallery/res04.webp",
+        "https://obecnirestauracezeliv.cz/img/gallery/res05.webp"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100083138806394",
+        "https://maps.app.goo.gl/cVqabv9vFwZPgwhL7"
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://obecnirestauracezeliv.cz/#footer",
+          "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Rezervace stolu"
+        }
+      }
+    }
+    </script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/master.css" />
@@ -602,35 +683,35 @@
             <img
               class="d-block w-100"
               src="img/gallery/res01.webp"
-              alt="First slide"
+              alt="Interiér Obecní restaurace Želiv"
             />
           </div>
           <div class="bsSlide carousel-item">
             <img
               class="d-block w-100"
               src="img/gallery/res02.webp"
-              alt="Second slide"
+              alt="Restaurace Želiv – pohled do sálu"
             />
           </div>
           <div class="bsSlide carousel-item">
             <img
               class="d-block w-100"
               src="img/gallery/res03.webp"
-              alt="Third slide"
+              alt="Obecní restaurace Želiv – interiér"
             />
           </div>
           <div class="bsSlide carousel-item">
             <img
               class="d-block w-100"
               src="img/gallery/res04.webp"
-              alt="Fourth slide"
+              alt="Restaurace Želiv – prostory pro hosty"
             />
           </div>
           <div class="bsSlide carousel-item">
             <img
               class="d-block w-100"
               src="img/gallery/res05.webp"
-              alt="Fifth slide"
+              alt="Obecní restaurace Želiv – galerie"
             />
           </div>
         </div>

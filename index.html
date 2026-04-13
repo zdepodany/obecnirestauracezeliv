@@ -209,11 +209,15 @@
         from { opacity: 0; }
         to { opacity: 1; }
       }
+
+      /* Hero centering override */
+      .welcomeContent {
+        padding-top: 0 !important;
+        justify-content: center !important;
+      }
     </style>
 
-    <!-- Slick styles -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
 
     <!-- Google Icons -->
     <link
@@ -279,30 +283,6 @@
         <h2>Obecní restaurace</h2>
         <h1>ŽELIV</h1>
         <div class="line"></div>
-        <div class="quoteSlider">
-          <div class="quoteSlide">
-            <span class="quote"
-              >"Žádná láska není tak opravdová, jako láska k jídlu."</span
-            ><br />
-            <span class="quoteAuthor">- George Bernard Shaw</span>
-          </div>
-
-          <div class="quoteSlide">
-            <span class="quote"
-              >"Když po slavnostní večeři políbíme hostitelku na obě líce,
-              ušetříme jí ubrousek."</span
-            ><br />
-            <span class="quoteAuthor">- Alexander Roda Roda</span>
-          </div>
-
-          <div class="quoteSlide">
-            <span class="quote"
-              >"Nechť je tvé jídlo tvým lékem a tvůj lék nechť je tvým
-              jídlem"</span
-            ><br />
-            <span class="quoteAuthor">- Hippokratés</span>
-          </div>
-        </div>
         <a class="heroReviews" href="https://maps.app.goo.gl/cVqabv9vFwZPgwhL7" target="_blank" rel="noopener noreferrer">
           <span class="heroReviewsStars" aria-label="4 z 5 hvězd">★★★★☆</span>
           <span class="heroReviewsText">4,0 · 335 recenzí na Google</span>
@@ -903,21 +883,8 @@
         Web z dílny <a href="https://zdenekpodany.cz" target="_blank" rel="noopener noreferrer">Weby | Zdeněk Podaný</a>
       </p>
     </footer>
-    <!-- JS a Knihovny -->
-    <script
-      defer
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <!-- JS pro Slick Slider -->
-    <script
-      defer
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <!-- JS Skripty -->
     <script defer type="text/javascript" src="js/navbar.js"></script>
-    <script defer type="text/javascript" src="js/slickSliders.js"></script>
     <script defer type="text/javascript" src="js/openingHours.js"></script>
     <script defer type="text/javascript" src="js/gallery.js"></script>
 

@@ -7,9 +7,9 @@ function isOpen() {
   const minutes = now.getMinutes();
   const currentMinutes = hours * 60 + minutes;
 
-  // Pátek a sobota: 11:00 - 22:00, ostatní dny: 11:00 - 20:00
-  const openMinutes = 11 * 60; // 11:00
-  const closeMinutes = (day === 5 || day === 6) ? 22 * 60 : 20 * 60; // 22:00 nebo 20:00
+  // PO: 11-14, ÚT-ČT: 11-20, PÁ-SO: 11-21, NE: 11-20
+  const openMinutes = 11 * 60;
+  const closeMinutes = day === 1 ? 14 * 60 : (day === 5 || day === 6) ? 21 * 60 : 20 * 60;
 
   return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
 }
@@ -20,7 +20,7 @@ function getMinutesUntilOpening() {
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
   const openMinutes = 11 * 60;
 
-  const closeMinutes = (day === 5 || day === 6) ? 22 * 60 : 20 * 60;
+  const closeMinutes = day === 1 ? 14 * 60 : (day === 5 || day === 6) ? 21 * 60 : 20 * 60;
 
   if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
     return 0;

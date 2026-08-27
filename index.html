@@ -8,18 +8,18 @@
     <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po–Čt 11–20, Pá–So 11–22. Kontakt: +420 739 158 665.">
+    <meta name="description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po 11–14, Út–Čt a Ne 11–20, Pá–So 11–21. Kontakt: +420 739 158 665.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Obecní restaurace Želiv">
     <meta name="geo.region" content="CZ-311">
-    <meta name="last-modified" content="2026-04-13">
+    <meta name="last-modified" content="2026-08-27">
 
     <!-- Open Graph -->
     <meta property="og:locale" content="cs_CZ">
-    <meta property="og:updated_time" content="2026-04-13T00:00:00+02:00">
+    <meta property="og:updated_time" content="2026-08-27T00:00:00+02:00">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Obecní restaurace Želiv | Jídelní lístek a rezervace">
-    <meta property="og:description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po–Čt 11–20, Pá–So 11–22.">
+    <meta property="og:description" content="Obecní restaurace Želiv – jídelní lístek, rezervace stolu, pronájem kulturního domu. Otevřeno Po 11–14, Út–Čt a Ne 11–20, Pá–So 11–21.">
     <meta property="og:url" content="https://obecnirestauracezeliv.cz">
     <meta property="og:site_name" content="Obecní restaurace Želiv">
     <meta property="og:image" content="https://obecnirestauracezeliv.cz/img/bg1.webp">
@@ -63,8 +63,9 @@
         "longitude": 15.223808
       },
       "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "20:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "22:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:00", "closes": "14:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "21:00"},
         {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "20:00"}
       ],
       "aggregateRating": {
@@ -251,10 +252,10 @@
     <nav class="myNavbar">
       <div class="navbarInner">
         <div class="navbarLeft">
-          <div class="navbarInfoItem navbarInfoItem--status">
+          <a class="navbarInfoItem navbarInfoItem--status" href="#footer" aria-label="Zobrazit otevírací dobu">
             <span class="material-symbols-outlined">schedule</span>
             <span id="openingHoursForToday" class="statusIndicator"></span>
-          </div>
+          </a>
         </div>
         <div class="navbarLinks">
           <a class="navbarLink" href="#">Úvod</a>

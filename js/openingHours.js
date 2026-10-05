@@ -1,5 +1,13 @@
 const hourSpotDesktop = document.querySelector("#openingHoursForToday");
 
+// PO: 11-14, ÚT-ČT: 11-15, PÁ+NE: 11-19, SO: 11-20
+function getCloseMinutes(day) {
+  if (day === 1) return 14 * 60;
+  if (day >= 2 && day <= 4) return 15 * 60;
+  if (day === 6) return 20 * 60;
+  return 19 * 60;
+}
+
 function isOpen() {
   const now = new Date();
   const day = now.getDay(); // 0 = neděle, 1 = pondělí, ..., 6 = sobota
@@ -7,9 +15,8 @@ function isOpen() {
   const minutes = now.getMinutes();
   const currentMinutes = hours * 60 + minutes;
 
-  // PO: 11-14, ÚT-ČT: 11-20, PÁ-SO: 11-21, NE: 11-20
   const openMinutes = 11 * 60;
-  const closeMinutes = day === 1 ? 14 * 60 : (day === 5 || day === 6) ? 21 * 60 : 20 * 60;
+  const closeMinutes = getCloseMinutes(day);
 
   return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
 }
@@ -20,7 +27,7 @@ function getMinutesUntilOpening() {
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
   const openMinutes = 11 * 60;
 
-  const closeMinutes = day === 1 ? 14 * 60 : (day === 5 || day === 6) ? 21 * 60 : 20 * 60;
+  const closeMinutes = getCloseMinutes(day);
 
   if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
     return 0;

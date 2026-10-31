@@ -1,11 +1,11 @@
 const hourSpotDesktop = document.querySelector("#openingHoursForToday");
 
-// PO: 11-14, ÚT-ČT: 11-15, PÁ+NE: 11-19, SO: 11-20
+// PO: 11-14, ÚT-ČT: 11-15, PÁ: 11-17, SO+NE: 11-16
 function getCloseMinutes(day) {
   if (day === 1) return 14 * 60;
   if (day >= 2 && day <= 4) return 15 * 60;
-  if (day === 6) return 20 * 60;
-  return 19 * 60;
+  if (day === 5) return 17 * 60;
+  return 16 * 60;
 }
 
 function isOpen() {
